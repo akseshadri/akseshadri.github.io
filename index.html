@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashwin K. Seshadri — Associate Professor, IISc Bengaluru</title>
+  <meta name="description" content="Associate Professor at the Centre for Atmospheric and Oceanic Sciences and Divecha Centre for Climate Change, Indian Institute of Science. Research in climate dynamics, nonlinear Earth systems, and decarbonization.">
+  <meta name="keywords" content="climate dynamics, monsoon, decarbonization, IISc, atmospheric science, nonlinear systems, renewable energy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f2035;
+      --teal: #0f7b68;
+      --teal-light: #e6f5f2;
+      --teal-mid: #1a9e87;
+      --gold: #b5862a;
+      --gold-light: #fdf6e8;
+      --text: #1e2a35;
+      --text-mid: #4a5568;
+      --text-light: #718096;
+      --border: #e2e8f0;
+      --bg: #fafaf8;
+      --white: #ffffff;
+      --nav-width: 220px;
+      --serif: 'Spectral', Georgia, serif;
+      --sans: 'Fira Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── LAYOUT ── */
+    .site-wrapper {
+      display: block;
+      min-height: 100vh;
+    }
+
+    /* ── SIDEBAR NAV ── */
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--nav-width);
+      height: 100vh;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      padding: 2.5rem 0;
+      z-index: 100;
+      overflow-y: auto;
+    }
+
+    .sidebar-brand {
+      padding: 0 1.5rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .sidebar-brand .initials {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--teal);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 17px;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar-brand .name {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    nav { padding: 1.5rem 0; }
+
+    nav a {
+      display: block;
+      padding: 0.5rem 1.5rem;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s, background 0.15s;
+      border-left: 2px solid transparent;
+    }
+
+    nav a:hover, nav a.active {
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+      border-left-color: var(--teal-mid);
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .sidebar-footer a {
+      display: block;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+    .sidebar-footer a:hover { color: rgba(255,255,255,0.75); }
+
+    /* ── MAIN CONTENT ── */
+    main { margin-left: var(--nav-width); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 4rem 3.5rem 3rem;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 3rem;
+      max-width: 860px;
+      align-items: start;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 2.1rem;
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-inst {
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-bio {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--text-mid);
+      max-width: 540px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid;
+      transition: background 0.15s;
+    }
+
+    .pill-teal {
+      background: var(--teal-light);
+      border-color: #a8d8d1;
+      color: #0a5c4e;
+    }
+    .pill-teal:hover { background: #c8eae5; }
+
+    .pill-gold {
+      background: var(--gold-light);
+      border-color: #e0c87a;
+      color: #7a5a1a;
+    }
+    .pill-gold:hover { background: #faefd0; }
+
+    .pill-gray {
+      background: #f1f5f9;
+      border-color: #cbd5e0;
+      color: var(--text-mid);
+    }
+    .pill-gray:hover { background: #e2e8f0; }
+
+    .hero-photo {
+      position: relative;
+    }
+
+    .hero-photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      filter: grayscale(10%);
+    }
+
+    .contact-card {
+      margin-top: 0.75rem;
+      font-size: 12px;
+      color: var(--text-light);
+      line-height: 1.9;
+    }
+
+    .contact-card a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── BADGES / HONORS ── */
+    .honors-strip {
+      padding: 1rem 3.5rem;
+      background: var(--teal-light);
+      border-bottom: 1px solid #b8ddd8;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.75rem;
+      align-items: center;
+    }
+
+    .honor-item {
+      font-size: 12.5px;
+      color: #0a5c4e;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .honor-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 2.5rem 3.5rem; border-bottom: 1px solid var(--border); }
+    section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--teal);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── RESEARCH THEMES ── */
+    .themes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .theme-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .theme-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--teal);
+    }
+
+    .theme-card h3 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .theme-card p {
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0 0;
+    }
+
+    .stat-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 11.5px;
+      color: var(--text-light);
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── NEWS ── */
+    .news-list { list-style: none; max-width: 700px; }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-item:last-child { border-bottom: none; }
+
+    .news-date {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--text-light);
+      padding-top: 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .news-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .news-text a {
+      color: var(--navy);
+      text-decoration: underline;
+      text-decoration-color: #b8c5d0;
+      text-underline-offset: 2px;
+      font-style: italic;
+    }
+
+    .news-text a:hover {
+      color: var(--teal);
+      text-decoration-color: var(--teal);
+    }
+
+    .news-journal {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* ── TEACHING ── */
+    .course-row {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 1rem;
+      align-items: baseline;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .course-row:last-child { border-bottom: none; }
+
+    .course-code {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--teal);
+      font-family: monospace;
+      letter-spacing: 0.04em;
+    }
+
+    .course-name {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .course-rating {
+      font-size: 12px;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+
+    /* ── MOBILE NAV ── */
+    .mobile-nav-toggle {
+      display: none;
+      position: fixed;
+      top: 1rem; right: 1rem;
+      z-index: 200;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      width: 40px; height: 40px;
+      cursor: pointer;
+      font-size: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      :root { --nav-width: 0px; }
+
+      .sidebar {
+        transform: translateX(-100%);
+        width: 240px;
+        transition: transform 0.25s ease;
+      }
+
+      .sidebar.open { transform: translateX(0); }
+
+      .mobile-nav-toggle { display: flex; }
+
+      main { margin-left: 0; }
+
+      .hero { padding: 2rem 1.5rem 1.5rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .hero-photo img { width: 140px; height: 140px; }
+
+      .honors-strip { padding: 1rem 1.5rem; }
+      section { padding: 2rem 1.5rem; }
+
+      .themes-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+
+      .course-row { grid-template-columns: 1fr; gap: 0.2rem; }
+      .course-rating { color: var(--text-mid); }
+    }
+  </style>
+</head>
+<body>
+
+<button class="mobile-nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="site-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="initials">AKS</div>
+      <div class="name">Ashwin K.<br>Seshadri</div>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="group.html">Research Group</a>
+      <a href="highlights.html">Research Highlights</a>
+      <a href="working_papers.html">Selected Working Papers</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="opportunities.html">Opportunities</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="https://scholar.google.co.in/citations?hl=en&user=NJpOqqQAAAAJ&sortby=pubdate" target="_blank">Google Scholar ↗</a>
+      <a href="https://orcid.org/0000-0002-1801-5708" target="_blank">ORCID ↗</a>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=56556420400" target="_blank">Scopus ↗</a>
+      <a href="https://github.com/akseshadri" target="_blank">GitHub ↗</a>
+      <a href="mailto:ashwins@iisc.ac.in" style="margin-top:0.75rem;">ashwins@iisc.ac.in</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-title">Associate Professor</div>
+          <h1>Ashwin K. Seshadri</h1>
+          <div class="hero-inst">Centre for Atmospheric and Oceanic Sciences, &amp;<br>Divecha Centre for Climate Change<br>Indian Institute of Science, Bengaluru</div>
+          <p class="hero-bio">
+            Our group works at the intersection of nonlinear climate dynamics and the science and policy of decarbonization — asking which aspects of climate and Earth-system behaviour can be projected or understood robustly, which uncertainties remain irreducible, and how to design reliable pathways to a low-carbon energy system.
+          </p>
+          <div class="hero-links">
+            <a href="publications.html" class="pill pill-teal">Publications</a>
+            <a href="group.html" class="pill pill-teal">Research Group</a>
+            <a href="highlights.html" class="pill pill-teal">Research Highlights</a>
+            <a href="working_papers.html" class="pill pill-teal">Selected Working Papers</a>
+            <a href="teaching.html" class="pill pill-teal">Teaching</a>
+            <a href="opportunities.html" class="pill pill-gold">Open Positions</a>
+            <a href="https://scholar.google.co.in/citations?hl=en&user=NJpOqqQAAAAJ&sortby=pubdate" target="_blank" class="pill pill-gray">Google Scholar ↗</a>
+            <a href="https://orcid.org/0000-0002-1801-5708" target="_blank" class="pill pill-gray">ORCID ↗</a>
+            <a href="https://github.com/akseshadri" target="_blank" class="pill pill-gray">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="photo.jpg" alt="Ashwin K. Seshadri">
+          <div class="contact-card">
+            Room D-404, DCCC Building<br>
+            IISc, Bengaluru 560012<br>
+            <a href="mailto:ashwins@iisc.ac.in">ashwins@iisc.ac.in</a>
+            <br><br>
+            <em>Ph.D., Engineering and Public Policy</em><br>Carnegie Mellon University<br>
+            <em>M.S., Mechanical Engineering</em><br>Purdue University<br>
+            <em>B.S., Mechanical Engineering</em><br>Purdue University
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <div class="section-label">Research Themes</div>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <h3>Climate Dynamics &amp; Nonlinear Earth System Dynamics</h3>
+          <p>Nonlinear dynamics of monsoons; monsoon regime stability and onset/withdrawal. What makes monsoon systems robust — or fragile — across climatic states? Earth-system feedbacks, their latitudinal dependence, and differences across forcing agents. Theory and methods for ensemble design in Earth-system modeling.</p>
+        </div>
+        <div class="theme-card">
+          <h3>Science &amp; Policy of Decarbonization</h3>
+          <p>Mechanisms behind cumulative emissions–global warming relationships and carbon budgets; zero-emissions commitment. Grid integration of variable renewables. Renewable energy droughts, wind-solar complementarity, energy storage modelling and tradeoffs, and policy mechanisms for decarbonization, reliability, and grid stability.</p>
+        </div>
+        <div class="theme-card">
+          <h3>Monsoon Variability &amp; Prediction</h3>
+          <p>Active–break cycle dynamics; subseasonal variability and sources of predictability; monsoon low-pressure system dynamics; effects of global warming and solar geoengineering on low pressure systems; Somali Jet and cross-equatorial flow energetics; intraseasonal convection–circulation coupling.</p>
+        </div>
+        <div class="theme-card">
+          <h3>Systemic Risk in Low-Carbon Energy Transitions</h3>
+          <p>Stability and resilience of low-carbon transitions, and navigating compound risks in energy transitions amidst accelerating global systemic risks. Feedbacks between climate change and net-zero pathways — including climate tipping points, warming impacts on renewable energy systems, and changing resource economics.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- NEWS -->
+    <section id="news">
+      <div class="section-label">Recent Updates</div>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">Apr 2026</span>
+          <div>
+            <div class="news-text"><a href="https://www.cell.com/one-earth/abstract/S2590-3322(26)00056-4" target="_blank">The urgency of building systemic risk capacity in a polycrisis world</a></div>
+            <div class="news-journal">Gambhir et al. · <em>One Earth</em></div>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Apr 2026</span>
+          <div>
+            <div class="news-text"><a href="https://doi.org/10.1175/JCLI-D-25-0510.1" target="_blank">Accounting for the bias in the median track of Indian Summer monsoon low-pressure systems in an Earth system model</a></div>
+            <div class="news-journal">Singh, Bala &amp; Seshadri · <em>Journal of Climate</em></div>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Mar 2026</span>
+          <div>
+            <div class="news-text"><a href="https://doi.org/10.1002/qj.70140" target="_blank">Mechanisms shaping active-break spell variability in flood and drought years of the Indian Summer Monsoon</a></div>
+            <div class="news-journal">Jha, Nanjundiah &amp; Seshadri · <em>QJRMS</em></div>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Jan 2026</span>
+          <div>
+            <div class="news-text"><a href="https://doi.org/10.1016/j.est.2026.120532" target="_blank">Balancing seasonal variability in low-carbon electricity systems: A review of technologies and strategies</a></div>
+            <div class="news-journal">Gangopadhyay &amp; Seshadri · <em>Journal of Energy Storage</em></div>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Sep 2025</span>
+          <div>
+            <div class="news-text"><a href="https://doi.org/10.1016/j.ecocom.2025.101138" target="_blank">Effects of global warming trends on temperature-sensitive tri-trophic dynamics</a></div>
+            <div class="news-journal">Murthy, Kumar &amp; Seshadri · <em>Ecological Complexity</em></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching">
+      <div class="section-label">Teaching at IISc &nbsp;·&nbsp; <a href="teaching.html" style="font-size:11px; color:var(--teal); text-decoration:none; font-weight:600; letter-spacing:0.06em;">See full details ↗</a></div>
+      <div class="course-row" style="grid-template-columns: 80px 1fr;">
+        <span class="course-code">AS 210</span>
+        <span class="course-name">Numerical Methods in Atmospheric Modeling</span>
+      </div>
+      <div class="course-row" style="grid-template-columns: 80px 1fr;">
+        <span class="course-code">AS 313</span>
+        <span class="course-name">Nonlinear Models in Climate Sciences</span>
+      </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section id="service" style="padding-bottom:3rem;">
+      <div class="section-label">Selected Service &amp; Affiliations</div>
+      <ul style="list-style:none; font-size:13.5px; color:var(--text-mid); line-height:2.2; max-width:600px;">
+        <li><a href="https://www.ipcc.ch/assessment-report/ar7/" target="_blank" style="color:var(--navy); text-decoration:none; border-bottom:1px solid var(--border);">IPCC Seventh Assessment Report, Working Group I Review Editor</a></li>
+        <li><a href="https://www.asranetwork.org/" target="_blank" style="color:var(--navy); text-decoration:none; border-bottom:1px solid var(--border);">Accelerator for Systemic Risk Assessment (ASRA) network, hosted by the United Nations Foundation</a></li>
+        <li><a href="https://www.gauc.net/" target="_blank" style="color:var(--navy); text-decoration:none; border-bottom:1px solid var(--border);">Global Alliance of Universities on Climate (GAUC) Academic Committee</a></li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const sidebar = document.getElementById('sidebar');
+  toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+  document.addEventListener('click', e => {
+    if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>
